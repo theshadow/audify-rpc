@@ -3,7 +3,7 @@ GOBIN=go
 BINARY=audify-rpc
 
 BUILD=`git rev-parse --short HEAD`
-SEMVERSION=0.1.0
+SEMVERSION=1.0.0
 VERSION="${SEMVERSION}@${BUILD}"
 DEPSVERSION=`toml < Gopkg.lock | jq -c -r '.projects[] | "\(.name) \(.version)"' | tr ' ' ':' | tr '\n' ';' | sed 's/.$$//'`
 UNAME_S := $(shell uname -s)
