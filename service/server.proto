@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.github.theshadow.botland.audify";
+option java_outer_classname = "AudifyProto";
+
+package service;
+
+// The Audify service definition.
+service Audify {
+    rpc Search (SearchRequest) returns (stream SearchResponse) {}
+    rpc Shutdown(ShutdownRequest) returns (ShutdownResponse) {}
+    rpc Version(VersionRequest) returns (VersionResponse) {}
+}
+
+message Tag {
+    string tag = 1;
+}
+
+// Search request
+message SearchRequest {
+    // The source to filter the results to.
+    string Source = 2;
+    // Tags to apply to the query
+    repeated Tag tags = 3;
+}
+
+// The response message containing the greetings
+// article summary including media links for the audio.
+// Represents an item from the API. An item is a single result record that contains all the components of the
+message SearchResponse {
+    string Title = 1;
+    string Summary = 2;
+    // Don't know what this is for.
+    string DateURL = 3;
+    string AudioURL = 4;
+    string ImageURL = 5;
+    string ArticleURL = 6;
+    float Duration = 7;
+    uint64 FileSizeInBytes = 8;
+    uint32 NumPlays = 9;
+    string SourceID = 10;
+    string GUID = 11;
+    string PublishedAt = 12;
+}
+
+// The request for a system shutdown
+message ShutdownRequest {
+    // If true will force the service to shutdown forcing all connections to drop.
+    bool force = 1;
+}
+
+// The response after request to shutdown
+message ShutdownResponse {}
+
+// VersionRequest requests the build version of the service.
+message VersionRequest {
+}
+
+// VersionResponse includes the binary build version and the used dependencies and their versions.
+message VersionResponse {
+    string Version = 1;
+    repeated string Dependencies = 2;
+}
