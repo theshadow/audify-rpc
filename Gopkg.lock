@@ -122,16 +122,6 @@
 
 [[projects]]
   branch = "master"
-  name = "github.com/theshadow/ushadow"
-  packages = [
-    "audify/api",
-    "audify/cmd",
-    "audify/service"
-  ]
-  revision = "ace583d562673319947efc7142baff61ab89f9c2"
-
-[[projects]]
-  branch = "master"
   name = "golang.org/x/net"
   packages = [
     "context",
@@ -218,6 +208,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "7b84517afbd21c903511aad23c4e9c63405d5a28ae46803be16a61fb007c807a"
+  inputs-digest = "00ec76463851aec9be83e5e76257cc445186e8499159c4be6238837c74976204"
   solver-name = "gps-cdcl"
   solver-version = 1

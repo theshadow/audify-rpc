@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"google.golang.org/grpc"
-	"github.com/theshadow/ushadow/audify/api"
+	"github.com/theshadow/audify-rpc/api"
 )
 
 type Version struct{

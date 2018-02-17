@@ -11,7 +11,7 @@ import (
 	"github.com/spf13/cobra"
 	"google.golang.org/grpc"
 
-	pb "github.com/theshadow/ushadow/audify/service"
+	pb "github.com/theshadow/audify-rpc/service"
 )
 
 // searchCmd represents the search command

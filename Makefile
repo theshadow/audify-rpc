@@ -13,7 +13,7 @@ ifeq ($(UNAME_S),Darwin)
 endif
 
 # Setup the -ldflags option for go build here, interpolate the variable values
-LDFLAGS=-ldflags "-w -s -X github.com/theshadow/ushadow/audify/cmd.BinaryVersion=${VERSION} -X github.com/theshadow/ushadow/audify/cmd.BinaryDependencies=${DEPSVERSION}"
+LDFLAGS=-ldflags "-w -s -X github.com/theshadow/audify-rpc/cmd.BinaryVersion=${VERSION} -X github.com/theshadow/audify-rpc/cmd.BinaryDependencies=${DEPSVERSION}"
 
 # Builds the project
 build: deps

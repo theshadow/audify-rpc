@@ -10,7 +10,7 @@ import (
 	"github.com/spf13/cobra"
 	"google.golang.org/grpc"
 
-	pb "github.com/theshadow/ushadow/audify/service"
+	pb "github.com/theshadow/audify-rpc/service"
 )
 
 // versionCmd Will return the build version string of the binary.

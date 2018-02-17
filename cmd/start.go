@@ -13,8 +13,8 @@ import (
 
 	log "github.com/Sirupsen/logrus"
 
-	pb "github.com/theshadow/ushadow/audify/service"
-	api2 "github.com/theshadow/ushadow/audify/api"
+	pb "github.com/theshadow/audify-rpc/service"
+	api2 "github.com/theshadow/audify-rpc/api"
 
 	"golang.org/x/net/context/ctxhttp"
 )

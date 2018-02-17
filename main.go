@@ -4,7 +4,7 @@
 
 package main
 
-import "github.com/theshadow/ushadow/audify/cmd"
+import "github.com/theshadow/audify-rpc/cmd"
 
 func main() {
 	cmd.Execute()
